@@ -1,9 +1,10 @@
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 % \usepackage{graphicx}
 % \usepackage{ragged2e}
-\usepackage[backend=bibtex, style=apa6]{biblatex}
+% \usepackage[backend=bibtex, style=apa6]{biblatex}
 
 \title{Impacto De Los APTs Sobre El Mundo Moderno}
 \author{Giovanni Dueck}
@@ -23,7 +24,7 @@
 % TODO add bibliography
 % TODO add citations
 \subsection{APT}
-Una Amenaza Avanzada Persistente, o APT (Advanced Persistent Threat, por sus siglas en inglés) es un actor sigiloso, típicamente un grupo perteneciente a o apoyado por un estado, que gana acceso no autorizado a una red de computadoras y permanece sin detectarse por un tiempo extendido. 
+Una Amenaza Persistente Avanzada, o APT (Advanced Persistent Threat, por sus siglas en inglés) es un actor sigiloso, típicamente un grupo perteneciente a o apoyado por un estado, que gana acceso no autorizado a una red de computadoras y permanece sin detectarse por un tiempo extendido. 
 
 Una entidad se clasifica como APT si es:
 \begin{itemize}
@@ -45,18 +46,18 @@ En la mayoría de los casos, el delito se comete con el fin de lucrar. Por lo ta
 Se hará esta distinción en el resto del documento: una acción es claramente un ciberdelito si busca lucrar o ataca a la sociedad civil sin objetivos militares, de lo contrario típicamente se puede hablar de una guerra o arma cibernética. Aun así, veremos más adelante que esta distinción no siempre se puede hacer claramente.
 
 \subsection{Malware}
-Malware ("malicious software", o software malicioso) es cualquier software dise-ñado para causar disrupción en una computadora, servidor, cliente o red, filtrar información privada, ganar acceso no autorizado, privar de acceso a información, o de otra forma irrumpe en la seguridad o privacidad informática de un usuario.
+Malware ("malicious software", o software malicioso) es cualquier software diseñado para causar disrupción en una computadora, servidor, cliente o red, filtrar información privada, ganar acceso no autorizado, privar de acceso a información, o de otra forma irrumpe en la seguridad o privacidad informática de un usuario.
 
 \subsubsection{Ransomware}
 Malware que bloquea el acceso a información o sistemas informáticos y amenaza con publicar o destruir dicha información a menos que se pague un rescate. Ransomware simple puede simplemente bloquear el acceso al sistema operativo sin dañar archivos, pero malware más avanzados usan técnicas de encripción, que efectivamente destruyen la información, y exigen un pago a cambio de la llave.
 
 \subsubsection{Rootkit}
-Una colección de software diseñado para dar acceso a una computadora de forma no permitida normalmente. "Root" se refiere al superusuario "root" en sistemas Unix-like, y "kit" al conjunto de herramientas.
+Una colección de software diseñado para dar acceso a una computadora de forma no permitida normalmente. Root se refiere al superusuario {\it root} en sistemas Unix-like, y {\it kit} al conjunto de herramientas.
 
 Típicamente pueden ocultar su presencia sin dejar de permanecer activos, e incluso pueden proveer una forma de instalar otros tipos de malware sin ser detectados.
 
 \subsubsection{Spyware}
-Spyware es software de espionage (*spying software*, en inglés). Es todo software con comportamiento maligno que apunta a la recolección de información sobre una persona u organización y enviarla a otra entidad de una forma que hiere al usuario violando su privacidad, amenazando su seguridad, entre otras formas.
+Spyware es software de espionage ({\it spying software}, en inglés). Es todo software con comportamiento maligno que apunta a la recolección de información sobre una persona u organización y enviarla a otra entidad de una forma que hiere al usuario violando su privacidad, amenazando su seguridad, entre otras formas.
 
 Frecuentemente está asociado a software publicitario, y su funcionalidad está incluida en muchas aplicaciones legítimas. Sin embargo, también se emplea en programas varios y malware empleado por gobiernos y APTs.
 
@@ -76,7 +77,7 @@ Malware independiente que se reproduce para alcanzar a otras computadoras. Típi
 Cualquier acto que intente o logre influenciar a una persona a actuar de una manera que pueda o no ser de beneficio es un acto de ingeniería social. La principal forma de ingeniería social en la ciberseguridad es el phishing, pero también existen técnicas que involucran hacerse pasar por otra persona, llamadas de voz o mensajes SMS.
 
 \subsection{Phishing}
-Phishing proviene de "fishing" en inglés, y consiste en una táctica de ingeniería social para "pescar" víctimas mediante un engaño. La forma más típica es mediante un correo electrónico, en el cual el atacante intenta parecer lo más cercanamente posible a algún servicio legítimo o alguna persona de confianza, con el fin de vulnerar a la víctima de alguna forma.
+Phishing proviene de {\it fishing} en inglés, y consiste en una táctica de ingeniería social para "pescar" víctimas mediante un engaño. La forma más típica es mediante un correo electrónico, en el cual el atacante intenta parecer lo más cercanamente posible a algún servicio legítimo o alguna persona de confianza, con el fin de vulnerar a la víctima de alguna forma.
 
 Spear-phishing es una variante del phishing con un enfoque muy preciso en cuanto a su objetivo, mientras que campañas de phishing típicas suelen no ser muy selectivas.
 
@@ -88,9 +89,63 @@ Zero-days pueden ser explotados mientras no son conocidos por cualquier grupo pa
 
 % Breve listado
 \section{Algunos APTs conocidos}
+\subsection{China}
+\subsubsection{APT1: Comment Crew}
+APT1 es un grupo vinculado al Ejército Popular de Liberación (PLA por sus siglas en inglés) de China. Es uno de los principales y más conocidos APTs chinos, y ha realizado campañas de ciberespionaje, robo de secretos y robo de propiedad intelectual principalmente en los Estados Unidos.
+
+El nombre coloquial de {\it Comment Crew} se debe a la tendencia a vulnerar sistemas de comentarios en sitios web legítimos.
+
+\subsubsection{APT10: Red Apollo}
+APT10 se vincula comúnmente al Ministerio de Seguridad del Estado de China, y es más conocido por la operación Cloud Hopper, una campaña extensa de ataque y robo de información en múltiples países de todos los continentes que tenía como objetivo a proveedores de servicios gerenciados (Managed Service Providers, MSP).
+
+\subsubsection{APT41: Double Dragon}
+APT41 es único entre los APTs chinos en que su operación es dual, operan tanto en campañas apoyadas por el gobierno como en campañas de cibercrimen, es decir para lucro del grupo, de donde provee el nombre {\it Double Dragon}.
+
+Fueron nombrados por el Departamento de Justicia de los EE.UU. por haber comprometido a más de 100 empresas.
+
+\subsection{Corea del Norte}
+\subsubsection{APT38: Lazarus Group}
+Lazarus Group es un grupo norcoreano designado tanto como APT como grupo criminal. Algunos investigadores reportan todos los casos de ataques provinientes de Corea del Norte bajo el nombre Lazarus Group, sin importar si provienen de algún subgrupo, como APT37 o Kimsuky.
+
+Sus ataques más infames incluyen el ataque destructivo a Sony, robo al Banco de Bangladesh y el ransomware WannaCry. Sus operaciones incluyen activismo digital, espionaje y exfiltración de información, y crímenes financieros.
+
+\subsection{Estados Unidos}
+\subsubsection{Equation Group}
+Equation Group es el grupo APT de la Agencia Nacional de Seguridad (NSA por sus siglas en inglés). Es actualmente considerado el APT más sofisticado, con operaciones que se adentran en el ciberespionaje, vigilancia masiva, y sabotaje por medio de armas cibernéticas capaces de causar daño en equipamiento industrial.
+
+La NSA fue objetivo de mucha crítica el ser descubierto su rol en la creación de Stuxnet, considerada por muchos la primera arma cibernética, por ende iniciando la era de las guerras cibernéticas, y por las tácticas y herramientas que tienen a su disposición, que fueron descubiertas por varios leaks.
+
+\subsection{Iran}
+\subsubsection{APT33: Elfin Team}
+APT33 es un grupo formado a más tardar en 2013, demostrando una gran capacidad de crecimiento en el área de seguridad por parte del gobierno iraní. Los objetivos de este grupo son principalmente los EE.UU. y Arabia Saudita, con el ataque más conocido deshabilitando las operaciones de la mayor empresa de petroquímicos de la zona, Saudi Aramco.
+
+\subsection{Israel}
+\subsubsection{Unit 8200}
+Unit 8200 es una unidad de los Cuerpos de Inteligencia de Israel cuya misión es la captación y descifrado de códigos. Su operación más conocida es la de Stuxnet, en la que colaboró con la NSA de los EE.UU.
+
+La unidad se compone principalmente de jóvenes de entre 18 y 21 años de edad, debido a, servicio militar obligatorio de no más de dos años. Esto significa que los reclutas elegidos deben tener la capacidad de aprender rápidamente y ser de utilidad a la unidad en el tiempo restante. Muchos ex miembros van al mundo empresario, con varios de estos fundando grandes empresas como Wix y NSO Group, y muchos otros trabajando en las mayores empresas tecnológicas del mundo.
+
+\subsection{Rusia}
+\subsubsection{APT28: Fancy Bear y APT29: Cozy Bear}
+APT28 y APT29 son dos grupos primariamente de ciberespionaje. Sus operaciones más conocidas son las interferencias en las elecciones de los EE.UU. en 2016, aunque también atacaron a varios países europeos y a la Agencia Mundial del Antidopaje.
+
+\subsubsection{Sandworm}
+Este grupo realizó varias operaciones contra el ejército y el pueblo de Ucrania, con ataques a la red eléctrica y un wiper que arrazó con una gran mayoría de los sistemas informáticos del país, considerado el ataque cibernético más destructivo de la historia. También emplearon un malware destructivo para atacar a los juegos olímpicos de invierno de 2018, haciendo todo lo posible para evitar ser descubiertos.
+
 
 % Eventos
 \section{Eventos y operaciones}
+
+\subsection{Moonlight Maze (1990)}
+En 1996, uno de los primeros ataques cibernéticos masivos había comenzado. Un grupo de hackers exfiltró una cantidad monumental de documentos, que si fuesen impresos y apilados superarían los 160 metros de altura.
+
+Un equipo de investigación fue formado en 1999, y la investigación recibió el nombre de "Moonlight Maze." En un principio, atribución era muy difícil, pero una investigación reciente por parte de un equipo en Kaspersky reveló conexiones con un grupo moderno: Turla.
+
+Turla es un APT ruso cuya operación de ciberespionaje en 2014 fue descubierta por Kaspersky e investigada extensamente. Los ataques se aprovecharon de dos zero-days, además de varias vulnerabilidades ya resueltas, y el malware infectó a computadoras en más de 45 países mediante tácticas de ingeniería social y spear-phishing.
+
+Vincular a un grupo sofisticado como Turla con un ataque tan histórico como lo es Moonlight Maze, revela que el grupo es realmente uno de los más antiguos y experimentados APTs existentes. El único grupo de edad similar es Equation Group, el APT vinculado con la NSA. Este último ya estuvo activo en 2001, y tal vez hasta en 1996.
+
+Ataques de esta magnitud muestran que los APTs bien financiados y capaces no son un fenómeno nuevo, existen desde los comienzos del internet moderno y no irán a desaparecer.
 
 % Conclusion
 \section{Conclusión}
