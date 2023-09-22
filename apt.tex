@@ -1,11 +1,13 @@
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{ragged2e}
+% \usepackage{graphicx}
+% \usepackage{ragged2e}
+\usepackage[backend=bibtex, style=apa6]{biblatex}
 
-\title{Impacto De APTs Sobre El Mundo Moderno}
+\title{Impacto De Los APTs Sobre El Mundo Moderno}
 \author{Giovanni Dueck}
+\date{Octubre, 2023}
 
 \begin{document}
 
@@ -16,9 +18,73 @@
     Abstract
 \end{abstract}
 
-
 % Definiciones y glosario
-\section{Definiciones y glosario}
+\section{Definiciones}
+% TODO add bibliography
+% TODO add citations
+\subsection{APT}
+Una Amenaza Avanzada Persistente, o APT (Advanced Persistent Threat, por sus siglas en inglés) es un actor sigiloso, típicamente un grupo perteneciente a o apoyado por un estado, que gana acceso no autorizado a una red de computadoras y permanece sin detectarse por un tiempo extendido. 
+
+Una entidad se clasifica como APT si es:
+\begin{itemize}
+    \item {\bf Avanzada (Advanced)}: Los operadores detras del grupo poseen un espectro completo de herramientas de recolección de inteligencia. Incluyen herramientas propias y open-source, pero pueden también incluir a la organización de inteligencia del estado.
+    \item {\bf Persistente (Persistent)}: Los operadores poseen objetivos a largo plazo, y no buscan información oportunísticamente por motivos de ganancia financiera u otros. Este tipo de objetivo *sugiere que el atacante es guiado por una entidad externa*. Los objetivos del atacante necesitan de un acceso permanente al objetivo, y al ser expulsados típicamente reintentan ganar acceso, y lo logran.
+    \item {\bf Amenaza (Threat)}: Los atacantes son una amenaza porque tienen tanto capacidad como intención. Son manejados por acciones humanas y no simplemente por código automatizado. Son operadores capacitados, organizados y bien financiados. No se limitan a grupos apoyados por estados.
+\end{itemize}
+
+\subsection{Arma Cibernética}
+Comúnmente se refiere a malware empleado por parte de agencias militares, paramilitares o de inteligencia en un ataque cibernético. Esto incluye, entre otros, virus, trotanos, spyware y gusanos.
+
+A diferencia de malware desarrollado para el crimen cibernético, como adware o ransomware, las armas cibernéticas típicamente son creadas por un APT o actor apoyado por un gobierno y son altamente selectivas en su objetivo.
+
+\subsection{Ciberdelito}
+Delito cibernético, o ciberdelito, es todo crimen o delito que involucra una computadora o redes de computadoras. Existen varias clases de crimen cibernético, desde fraude y lavado de dinero hasta crímenes financieros, estafas, extorsión, tráfico de drogas y materiales de abuso sexual de niños.
+
+En la mayoría de los casos, el delito se comete con el fin de lucrar. Por lo tanto, en muchos casos, operaciones ejecutadas por APTs son especiales en el mundo del ciberdelito y son más similares al espionaje.
+
+Se hará esta distinción en el resto del documento: una acción es claramente un ciberdelito si busca lucrar o ataca a la sociedad civil sin objetivos militares, de lo contrario típicamente se puede hablar de una guerra o arma cibernética. Aun así, veremos más adelante que esta distinción no siempre se puede hacer claramente.
+
+\subsection{Malware}
+Malware ("malicious software", o software malicioso) es cualquier software dise-ñado para causar disrupción en una computadora, servidor, cliente o red, filtrar información privada, ganar acceso no autorizado, privar de acceso a información, o de otra forma irrumpe en la seguridad o privacidad informática de un usuario.
+
+\subsubsection{Ransomware}
+Malware que bloquea el acceso a información o sistemas informáticos y amenaza con publicar o destruir dicha información a menos que se pague un rescate. Ransomware simple puede simplemente bloquear el acceso al sistema operativo sin dañar archivos, pero malware más avanzados usan técnicas de encripción, que efectivamente destruyen la información, y exigen un pago a cambio de la llave.
+
+\subsubsection{Rootkit}
+Una colección de software diseñado para dar acceso a una computadora de forma no permitida normalmente. "Root" se refiere al superusuario "root" en sistemas Unix-like, y "kit" al conjunto de herramientas.
+
+Típicamente pueden ocultar su presencia sin dejar de permanecer activos, e incluso pueden proveer una forma de instalar otros tipos de malware sin ser detectados.
+
+\subsubsection{Spyware}
+Spyware es software de espionage (*spying software*, en inglés). Es todo software con comportamiento maligno que apunta a la recolección de información sobre una persona u organización y enviarla a otra entidad de una forma que hiere al usuario violando su privacidad, amenazando su seguridad, entre otras formas.
+
+Frecuentemente está asociado a software publicitario, y su funcionalidad está incluida en muchas aplicaciones legítimas. Sin embargo, también se emplea en programas varios y malware empleado por gobiernos y APTs.
+
+\subsubsection{Troyano}
+Cualquier malware que engaña al usuario y oculta sus intenciones haciéndose pasar por software legítimo. Su nombre proviene del caballo de Troya.
+
+\subsubsection{Virus}
+Malware que, una vez ejecutado, se reproduce mediante inyección de código en otro programa. Si es exitoso, se dice que este programa está infectado. Típicamente requiere de un programa huésped y una acción por parte del usuario, el virus debe ser ejecutado.
+
+\subsubsection{Wiper}
+Todo malware diseñado para borrar (wipe, en inglés) un medio de almacenamiento de datos.
+
+\subsubsection{Worm}
+Malware independiente que se reproduce para alcanzar a otras computadoras. Típicamente lo hace a través de redes de computadoras, pero puede también hacer uso de medios físicos. A diferencia de un virus, es un programa independiente que no necesita de interacción con el usuario.
+
+\subsection{Ingeniería Social}
+Cualquier acto que intente o logre influenciar a una persona a actuar de una manera que pueda o no ser de beneficio es un acto de ingeniería social. La principal forma de ingeniería social en la ciberseguridad es el phishing, pero también existen técnicas que involucran hacerse pasar por otra persona, llamadas de voz o mensajes SMS.
+
+\subsection{Phishing}
+Phishing proviene de "fishing" en inglés, y consiste en una táctica de ingeniería social para "pescar" víctimas mediante un engaño. La forma más típica es mediante un correo electrónico, en el cual el atacante intenta parecer lo más cercanamente posible a algún servicio legítimo o alguna persona de confianza, con el fin de vulnerar a la víctima de alguna forma.
+
+Spear-phishing es una variante del phishing con un enfoque muy preciso en cuanto a su objetivo, mientras que campañas de phishing típicas suelen no ser muy selectivas.
+
+\subsection{Zero-day}
+Un Zero-day es una vulnerabilidad en un sistema informático desconocida por el proveedor y el público general. El nombre se refiere al tiempo que un proveedor conoce la vulnerabilidad.
+
+Zero-days pueden ser explotados mientras no son conocidos por cualquier grupo para cualquier objetivo, incluyendo la infiltración de malware, spyware, o acceso indebido a información. Son mitigados mediante un parche por parte del proveedor, y una vez descubiertos empieza una carrera por el proveedor para lanzarlo.
+
 
 % Breve listado
 \section{Algunos APTs conocidos}
