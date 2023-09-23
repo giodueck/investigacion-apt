@@ -2,5 +2,11 @@
 *.fdb_latexmk
 *.fls
 *.log
-*.pdf
+# *.pdf
 *.aux
+
+*-blx.bib
+*.bbl
+*.blg
+*.run.xml
+
