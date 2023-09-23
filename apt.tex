@@ -5,7 +5,9 @@
 \usepackage{csquotes}
 % \usepackage{graphicx}
 % \usepackage{ragged2e}
-% \usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{apt-bibliography.bib}
+\usepackage{hyperref}
 
 \title{Impacto De Grupos APT Sobre El Mundo Moderno}
 \author{Giovanni Dueck}
@@ -22,10 +24,10 @@
 
 % Definiciones y glosario
 \section{Definiciones}
-% TODO add bibliography
+% TODO complete bibliography
 % TODO add citations
 \subsection{APT}
-Una Amenaza Persistente Avanzada, o APT (Advanced Persistent Threat, por sus siglas en inglés) es un actor sigiloso, típicamente un grupo perteneciente a o apoyado por un estado, que gana acceso no autorizado a una red de computadoras y permanece sin detectarse por un tiempo extendido. 
+Una Amenaza Persistente Avanzada, o APT (Advanced Persistent Threat, por sus siglas en inglés) es un actor sigiloso, típicamente un grupo perteneciente a o apoyado por un estado, que gana acceso no autorizado a una red de computadoras y permanece sin detectarse por un tiempo extendido.\autocite{itgov-apt} 
 
 Una entidad se clasifica como APT si es:
 \begin{itemize}
@@ -150,5 +152,8 @@ Ataques de esta magnitud muestran que los APTs bien financiados y capaces no son
 
 % Conclusion
 \section{Conclusión}
+
+\newpage
+\printbibliography
 
 \end{document}
