@@ -10,7 +10,7 @@
 \hfuzz=14.999pt
 \usepackage{hyperref}
 
-\title{Impacto De Grupos APT Sobre El Mundo Moderno}
+\title{Impacto De APTs Sobre El Mundo Moderno}
 \author{Giovanni Dueck}
 \date{Octubre, 2023}
 
@@ -26,7 +26,7 @@
 % Definiciones y glosario
 \section{Definiciones}
 \subsection{APT}
-Una Amenaza Persistente Avanzada, o APT (Advanced Persistent Threat, por sus siglas en inglés) es un actor sigiloso, típicamente un grupo perteneciente a o apoyado por un estado, que gana acceso no autorizado a una red de computadoras y permanece sin detectarse por un tiempo extendido. No se limitan a grupos apoyados por estados. \autocite{cybereason-apt} 
+Una Amenaza Persistente Avanzada, o APT ({\it Advanced Persistent Threat} en inglés) es un actor sigiloso, típicamente un grupo perteneciente a o apoyado por un estado, que gana acceso no autorizado a una red de computadoras y permanece sin detectarse por un tiempo extendido. No se limitan a grupos apoyados por estados. \autocite{cybereason-apt} 
 
 Una entidad se clasifica como APT si es:
 \begin{itemize}
@@ -90,7 +90,7 @@ APT33 es un grupo formado a más tardar en 2013, demostrando una gran capacidad 
 
 \subsection{Israel}
 \subsubsection{Unit 8200}
-Unit 8200 es una unidad de los Cuerpos de Inteligencia de Israel cuya misión es la captación y descifrado de códigos. Su operación más conocida es la de Stuxnet, en la que colaboró con la NSA de los EE.UU. \autocite{washingtonpost-stuxnet}
+Unit 8200 es una unidad de los Cuerpos de Inteligencia de Israel cuya misión es la captación y descifrado de códigos. Frecuentemente son asociados con Stuxnet, ciberarma en cuya creación Israel colaboró con la NSA de los EE.UU. \autocite{washingtonpost-stuxnet}
 
 La unidad se compone principalmente de jóvenes de entre 18 y 21 años de edad, debido a, servicio militar obligatorio de no más de dos años. Esto significa que los reclutas elegidos deben tener la capacidad de aprender rápidamente y ser de utilidad a la unidad en el tiempo restante. Muchos ex miembros van al mundo empresario, con varios de estos fundando grandes empresas como Wix y NSO Group, y muchos otros trabajando en las mayores empresas tecnológicas del mundo. \autocite{globes-unit-8200} \autocite{forbes-unit-8200}
 
@@ -135,12 +135,24 @@ Los datos robados fueron principalmente propiedad intelectual, llevando a la esp
 De acuerdo a McAfee, los atacantes tuvieron acceso al código fuente de varias empresas tecnológicas y del sector de defensa. En el centro del escándalo estaban los sistemas de gestión de configuración de software (SCM por sus siglas en inglés), que no tenían defensas. Esto significa que las vulnerabilidades en los productos de estas empresas pueden ser encontradas más facilmente al tener acceso al código fuente. \autocite{wired-aurora}
 
 \subsection{Stuxnet (2010)}
-% TODO majorest
-\autocite{darknetdiaries-stuxnet}
-\autocite{washingtonpost-stuxnet}
-\autocite{washingtonpost-stuxnet-2}
-\autocite{zetter-stuxnet}
-\autocite{symantec-stuxnet}
+Stuxnet es el malware más sofisticado jamás encontrado. Según varios reportes, es la obra de las agencias de inteligencia de los Estados Unidos e Israel, y es generalmente considerada la primera arma cibernética y el incidente que inició la era de la guerra cibernética.
+
+Inicialmente, expertos encontraron versiones que datan a junio de 2009, más tarde se encontrarían versiones en uso desde 2007. Sin embargo, la versión descubierta en 2010 hacía uso de varios {\it exploits} (FOOTNOTE del inglés, fragmento de software utilizado en la explotación de una vulnerabilidad de software) críticos de Microsoft Windows y poseía capacidades impensables para la época. Con un total de cuatro zero-days, Stuxnet tiene una complejidad incomparable. Donde un malware común normalmente emplea tácticas de ingeniería social y no más de un zero-day, aquí se emplean cuatro en un solo ataque. \autocite{symantec-stuxnet} \autocite{reuters-stuxnet}
+
+\subsubsection{Historia}
+La misión de Stuxnet era una de sabotaje como alternativa a un conflicto tradicional. Los EE.UU. habían descubierto que Irán, por medio de un físico llamado A.Q. Khan en Pakistan, lanzó un programa de enriquecimiento nuclear entre 1998 y 1999 y comenzó a comprar diseños para una fábrica de centrífugas. La CIA y la inteligencia británica habían infiltrado la cadena de suministro de A.Q. Khan y lograron interceptar un envío de centrifugas a Libia. En 2004, la Agencia Internacional de Energía Atómica de las Naciones Unidas investigó al programa libio y la CIA adquirió los materiales del programa.
+
+Las centrífugas se estudiaron extensivamente, lo que permitió crear un virus sigiloso que es capaz destruir equipamiento industrial físico, por primera vez en la historia. Con estos hallazgos, las administraciones del presidente Bush y más tarde la del presidente Obama aprobaron el programa, que fue nombrado Operación {\it Olympic Games} (Juegos Olímpicos).
+
+La versión inicial, sin embargo, tenía una falta: no lograba alcanzar a todas las computadoras necesarias, las que controlaban al sistema de control industrial. Por este motivo se agregaron exploits agresivos que permitieron al virus (1) esparcirse por la red local de una máquina infectada, (2) obtener privilegios elevados y (3) esconder la presencia y acciones del sistema operativo. 
+
+El ataque inició con una infiltración física del malware a la planta nuclear Natanz, que se encuentra en una zona remota y desconectada de internet. Una vez que Stuxnet logra infectar a la primera máquina, infecta rápidamente a toda computadora con Windows en la red en busca de instalaciones de software Siemens para el control de las centrífugas. Una vez encontradas estas computadoras críticas, monitorea el comportamiento normal de los sistemas de control antes de interferir en su operación.
+
+Stuxnet era capaz de alterar las frecuencias a las que operaban las centrífugas; al mismo tiempo reportaba frecuencias normales al sistema de monitoreo. De esta forma, las centrífugas se desgastan y hasta autodestruyen mucho más rápidamente. Se estiman que alrededor de 1.000 centrífugas fueron dañadas durante la operación, y el gas de uranio que contenían, desperdiciado. \autocite{zetter-stuxnet} \autocite{washingtonpost-stuxnet}
+
+El virus finalmente fue descubierto por analistas de VirusBlokAda, un proveedor de antivirus, al escapar de la planta por medio de una computadora transportada fuera del predio. Un reporte por Symantec luego afirmó que computadoras alrededor del mundo habian sido infectadas, con la gran mayoría de ellas en Irán. Se reportaron también que varios de los exploits utilizados ya se habían encontrado anteriormente por otras operaciones del APT Equation Group, por lo cual el ataque les fue atribuído. \autocite{infoworld-stuxnet} 
+
+Stuxnet inició debates sobre la guerra en el plano de la información. Fue la primera vez que un virus mostró la capacidad de subvertir sistemas de control industrial de manera tan sofisticada. Hasta este punto, la guerra cibernética no se había definido. El hecho de ser un ataque cibernético otorga cierta negación plausible (que no es posible con un ataque con misiles o bombas), y tampoco es claro si un ataque cibernético constituye un acto de guerra. \autocite{washingtonpost-stuxnet-2} \autocite{darknetdiaries-stuxnet}
 
 \subsection{Snowden Leaks (2013)}
 
