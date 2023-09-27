@@ -3,8 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{csquotes}
-% \usepackage{graphicx}
+
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
 % \usepackage{ragged2e}
+
 \usepackage[backend=biber,style=numeric]{biblatex}
 \addbibresource{apt-bibliography.bib}
 \hfuzz=14.999pt
@@ -150,13 +153,20 @@ Las centrífugas se estudiaron extensivamente, lo que permitió crear un virus s
 
 La versión inicial, sin embargo, tenía una falta: no lograba alcanzar a todas las computadoras necesarias, las que controlaban al sistema de control industrial. Por este motivo se agregaron exploits agresivos que permitieron al virus (1) esparcirse por la red local de una máquina infectada, (2) obtener privilegios elevados y (3) esconder la presencia y acciones del sistema operativo. 
 
-El ataque inició con una infiltración física del malware a la planta nuclear Natanz, que se encuentra en una zona remota y desconectada de internet. Una vez que Stuxnet logra infectar a la primera máquina, infecta rápidamente a toda computadora con Windows en la red en busca de instalaciones de software Siemens para el control de las centrífugas. Una vez encontradas estas computadoras críticas, monitorea el comportamiento normal de los sistemas de control antes de interferir en su operación.
+El ataque inició con una infiltración física del malware a la planta nuclear Natanz, que se encuentra en una zona remota y desconectada de internet. Una vez que Stuxnet logra infectar a la primera máquina, infecta rápidamente a toda computadora con Windows en la red en busca de instalaciones de software Siemens para el control de las centrífugas. Una vez encontradas estas computadoras críticas, monitorea el comportamiento normal de los sistemas de control antes de interferir en su operación. Un diagrama delinieando este proceso se muestra en la figura \ref{fig:stuxnet}.
 
 Stuxnet era capaz de alterar las frecuencias a las que operaban las centrífugas; al mismo tiempo reportaba frecuencias normales al sistema de monitoreo. De esta forma, las centrífugas se desgastan y hasta autodestruyen mucho más rápidamente. Se estiman que alrededor de 1.000 centrífugas fueron dañadas durante la operación, y el gas de uranio que contenían, desperdiciado. \autocite{zetter-stuxnet} \autocite{washingtonpost-stuxnet}
 
 El virus finalmente fue descubierto por analistas de VirusBlokAda, un proveedor de antivirus, al escapar de la planta por medio de una computadora transportada fuera del predio. Un reporte por Symantec luego afirmó que computadoras alrededor del mundo habian sido infectadas, con la gran mayoría de ellas en Irán. Se reportaron también que varios de los exploits utilizados ya se habían encontrado anteriormente por otras operaciones del APT Equation Group, por lo cual el ataque les fue atribuído. \autocite{infoworld-stuxnet} 
 
 Stuxnet inició debates sobre la guerra en el plano de la información. Fue la primera vez que un virus mostró la capacidad de subvertir sistemas de control industrial de manera tan sofisticada. Hasta este punto, la guerra cibernética no se había definido. El hecho de ser un ataque cibernético otorga cierta negación plausible (que no es posible con un ataque con misiles o bombas), y tampoco es claro si un ataque cibernético constituye un acto de guerra. \autocite{washingtonpost-stuxnet-2} \autocite{darknetdiaries-stuxnet}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1.0\textwidth]{Stuxnet_jpg.png}
+    \caption{funcionamiento de Stuxnet}
+    \label{fig:stuxnet}
+\end{figure}
 
 % \subsection{Snowden Leaks (2013)}
 % Todo only if got time
