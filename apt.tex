@@ -207,11 +207,17 @@ La NSA tiene una mala racha de ser expuesta por sus operaciones. Primero, Stuxne
 Esta última tendencia, la de acumular exploits para su uso en ciberarmas, se vio especialmente criticada en los años posteriores a este incidente por autores y periodistas. \autocite{schneier-shadow-brokers}. El exploit más significante del conjunto, nombrado ETERNALBLUE, causó graves daños al ser usado por Lazarus Group de Corea del Norte y Sandworm de Rusia en ataques masivos que lograron llevar a algunas de las empresas y agencias de gobierno más grandes del mundo a la era del lapiz y papel. Curiosamente, un parche para la vulnerabilidad fue lanzada poco tiempo antes de que el exploit sea revelado al público, llevando a especular que la NSA advirtió a Microsoft una vez que se enteraron de la brecha.
 
 \subsection{WannaCry (2017)}
-% TODO wannacry
-\autocite{darknetdiaries-wannacry}
-\autocite{doj-lazarus}
-\autocite{mandiant-mannacry}
+En mayo de 2017, el ciberataque más devastador hasta entonces empezó. Un ransomware llamado WannaCry, usando el exploit ETERNALBLUE, se estaba propagando por las computadoras de organizaciones e individuos, encriptando archivos, y demandando un pago por la recuperación de la información.
 
+ETERNALBLUE, una de las ciberarmas de la NSA robadas por los Shadow Brokers, se aprovecha de una vulnerabilidad de ejecución remota de código en el protocolo de transferencia de archivos SMB en Windows. MS17-010, como la llamó Microsoft, es una vulnerabilidad tan severa que hasta productos viejos sin garantía de soporte recibieron un parche para mitigarla, y WannaCry demostró por primera vez esta severidad a gran escala. \autocite{mandiant-mannacry}
+
+Dentro de pocos minutos, el virus es capaz de infectar una organización entera. Entre las afectadas está la NHS, el servicio nacional de la salud del Reino Unido. Este se vió obligado a desconectar a varios hospitales del internet, varios otros tuvieron que suspender sus actividades o continuarlas en papel y pizarras. 
+
+El virus consiste de dos módulos: un gusano, que mediante ETERNALBLUE se propaga a nuevas máquinas, descarga y ejecuta las herramientas para ejecutar el ataque sobre los archivos, y las herramientas de encripción, que causan un daño crítico a los archivos de una computadora. Finalmente, una pantalla de ransomware informa a la víctima de su destino y propone las instrucciones para la decodificación de sus archivos: un pago de US\$ 300 a US\$ 600 en Bitcoin.
+
+Sin embargo, el virus posee un punto débil. Un {\it killswitch}, un interruptor de apagado, que consiste en una prueba de conexión a una URL de nombre aparentemente aleatorio. Cuando un analista independiente registra el nombre de dominio unas horas luego del inicio del ataque, encuentra que al lograr conectarse, el virus desactiva la herramienta de encripción y detiene el ataque. Múltiples versiones aparecieron luego de activarse el killswitch, tanto con un URL diferente como sin killswitch, pero ya no llegaron a causar el mismo impacto que la primera oleada. \autocite{darknetdiaries-wannacry}
+
+El Departamento de Justicia de los Estados Unidos comunicó a la prensa en 2018 una acusación a un programador de Corea del Norte por su participación en Lazarus Group y los ataques a Sony, robo al Banco de Bangladesh y ataque WannaCry. \autocite{doj-lazarus}
 
 \begin{figure}[t]
     \centering
