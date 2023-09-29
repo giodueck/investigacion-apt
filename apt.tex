@@ -19,6 +19,8 @@
 
 \begin{document}
 
+% TODO make \textsc{EternalBlue} \textsc
+
 \maketitle
 
 % Abstract
@@ -151,7 +153,7 @@ La misión de Stuxnet era una de sabotaje como alternativa a un conflicto tradic
 
 Las centrífugas se estudiaron extensivamente, lo que permitió crear un virus sigiloso que es capaz destruir equipamiento industrial físico, por primera vez en la historia. Con estos hallazgos, las administraciones del presidente Bush y más tarde la del presidente Obama aprobaron el programa, que fue nombrado Operación {\it Olympic Games} (Juegos Olímpicos).
 
-La versión inicial, sin embargo, tenía una falta: no lograba alcanzar a todas las computadoras necesarias, las que controlaban al sistema de control industrial. Por este motivo se agregaron exploits agresivos que permitieron al virus (1) esparcirse por la red local de una máquina infectada, (2) obtener privilegios elevados y (3) esconder la presencia y acciones del sistema operativo. 
+La versión inicial, sin embargo, tenía una falta: no lograba alcanzar a todas las computadoras necesarias, las que controlaban al sistema de control industrial. Por este motivo se agregaron exploits agresivos que permitieron al virus (1) esparcirse por la red local de una máquina infectada, (2) obtener privilegios elevados y (3) esconder la presencia y acciones del sistema operativo. Esta clase de malware es llamada un {\it worm} (gusano), un programa que es capaz de replicarse de forma autónoma para moverse a huéspedes nuevos, y las herramientas que permiten esconderse del sistema operativo y obtener privilegios elevados son llamadas {\it rootkit}.
 
 El ataque inició con una infiltración física del malware a la planta nuclear Natanz, que se encuentra en una zona remota y desconectada de internet. Una vez que Stuxnet logra infectar a la primera máquina, infecta rápidamente a toda computadora con Windows en la red en busca de instalaciones de software Siemens para el control de las centrífugas. Una vez encontradas estas computadoras críticas, monitorea el comportamiento normal de los sistemas de control antes de interferir en su operación. Un diagrama delinieando este proceso se muestra en la figura \ref{fig:stuxnet}.
 
@@ -198,41 +200,56 @@ Shadow Brokers realizaron muchas afirmaciones exageradas, incluso que las herram
 
 Inicialmente solo disponibilizaron unas pocas muestras, con la intención de subastar el resto al mejor postor, o al público general si el total de las ofertas llegase a BTC 1.000.000 (alrededor de US\$ 600 millones en ese tiempo). Pero como no lograron recaudar un monto significante, el grupo decidió publicar las herramientas descubiertas al público general.
 
-Hacer de acceso público armas cibernéticas sofisticadas, algunas incluso datando a los años 90 y las más recientes a 2013, significó un riesgo importante al mundo entero. Ahora no solo APTs poseían armas sofisticadas, sino grupos de criminales comunes.
+Hacer de acceso público armas cibernéticas sofisticadas, algunas incluso datando a los años 90 y las más recientes a 2013, significó un riesgo importante al mundo entero. Ahora no solo APTs podían acceder a armas cibernéticas sofisticadas, sino grupos de criminales comunes.
 
-No solo tenían acceso a herramientas, también a información operacional. Jake Williams, fundador de Rendition Security, publicó bastante sobre el grupo. En respuesta, un mensaje dirigido a Williams lo expuso como ex miembro de Equation Group, lo cual era información clasificada, y este lo confirma. \autocite{nytimes-shadow-brokers} \autocite{darknetdiaries-shadow-brokers}
+Además, Shadow Brokers demostraron también que posían información operacional. Jake Williams, fundador de Rendition Security, publicó bastante sobre el grupo. En respuesta, un mensaje dirigido a Williams lo expuso como ex miembro de Equation Group, lo cual era información clasificada, y este lo confirma. \autocite{nytimes-shadow-brokers} \autocite{darknetdiaries-shadow-brokers}
 
-La NSA tiene una mala racha de ser expuesta por sus operaciones. Primero, Stuxnet escapa de su objetivo para infectar al mundo, exponiendo las capacidades de creación de ciberarmas de Equation. Luego, en 2013 Edward Snowden, ex contratista de la NSA filtra miles de documentos revelando las capacidades de ciberespionaje y programas vigilancia masiva. Ahora, hackers logran acceder a y robar estas herramientas altamente peligrosas, las cuales la NSA ha estado acumulando desde los 90 sin contactar a los proveedores de los productos afectados.
+La NSA tiene una mala racha de ser expuesta por sus operaciones. Primero, Stuxnet escapa de su objetivo para luego infectar al mundo y exponer las capacidades de creación de ciberarmas de Equation Group. Luego, en 2013 Edward Snowden, ex contratista de la NSA, filtra miles de documentos revelando las capacidades de ciberespionaje y programas vigilancia masiva de la agencia. Ahora, hackers logran acceder a y distribuir herramientas altamente peligrosas, las cuales la NSA ha estado acumulando desde los años 90 sin contactar a los proveedores de los productos afectados.
 
-Esta última tendencia, la de acumular exploits para su uso en ciberarmas, se vio especialmente criticada en los años posteriores a este incidente por autores y periodistas. \autocite{schneier-shadow-brokers}. El exploit más significante del conjunto, nombrado ETERNALBLUE, causó graves daños al ser usado por Lazarus Group de Corea del Norte y Sandworm de Rusia en ataques masivos que lograron llevar a algunas de las empresas y agencias de gobierno más grandes del mundo a la era del lapiz y papel. Curiosamente, un parche para la vulnerabilidad fue lanzada poco tiempo antes de que el exploit sea revelado al público, llevando a especular que la NSA advirtió a Microsoft una vez que se enteraron de la brecha.
+Esta última tendencia, la de acumular exploits para su uso en ciberarmas, se vio especialmente criticada en los años posteriores a este incidente por autores y periodistas. \autocite{schneier-shadow-brokers}. El exploit más significante del conjunto, nombrado \textsc{EternalBlue}, causó graves daños al ser usado por Lazarus Group de Corea del Norte y Sandworm de Rusia en ataques masivos que lograron llevar a algunas de las empresas y agencias de gobierno más grandes del mundo a la era del lapiz y papel. Curiosamente, un parche para la vulnerabilidad fue lanzada poco tiempo antes de que el exploit sea revelado al público, llevando a especular que la NSA advirtió a Microsoft una vez que se enteraron de la brecha.
 
 \subsection{WannaCry (2017)}
-En mayo de 2017, el ciberataque más devastador hasta entonces empezó. Un ransomware llamado WannaCry, usando el exploit ETERNALBLUE, se estaba propagando por las computadoras de organizaciones e individuos, encriptando archivos, y demandando un pago por la recuperación de la información.
+En mayo de 2017, el ciberataque más devastador hasta entonces empezó. Un ransomware llamado WannaCry, usando el exploit \textsc{EternalBlue}, se estaba propagando por las computadoras de organizaciones e individuos, encriptando archivos, y demandando un pago por la recuperación de la información.
 
-ETERNALBLUE, una de las ciberarmas de la NSA robadas por los Shadow Brokers, se aprovecha de una vulnerabilidad de ejecución remota de código en el protocolo de transferencia de archivos SMB en Windows. MS17-010, como la llamó Microsoft, es una vulnerabilidad tan severa que hasta productos viejos sin garantía de soporte recibieron un parche para mitigarla, y WannaCry demostró por primera vez esta severidad a gran escala. \autocite{mandiant-mannacry}
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Wana_Decrypt0r.png}
+    \caption{pantalla de una computadora infectada con el ransomware WannaCry}
+\end{figure}
+
+\textsc{EternalBlue}, una de las ciberarmas de la NSA robadas por los Shadow Brokers, se aprovecha de una vulnerabilidad de ejecución remota de código en el protocolo de transferencia de archivos SMB en Windows. MS17-010, como la llamó Microsoft, es una vulnerabilidad tan severa que hasta productos viejos sin garantía de soporte recibieron un parche para mitigarla, y WannaCry demostró por primera vez esta severidad a gran escala. \autocite{mandiant-mannacry}
 
 Dentro de pocos minutos, el virus es capaz de infectar una organización entera. Entre las afectadas está la NHS, el servicio nacional de la salud del Reino Unido. Este se vió obligado a desconectar a varios hospitales del internet, varios otros tuvieron que suspender sus actividades o continuarlas en papel y pizarras. 
 
-El virus consiste de dos módulos: un gusano, que mediante ETERNALBLUE se propaga a nuevas máquinas, descarga y ejecuta las herramientas para ejecutar el ataque sobre los archivos, y las herramientas de encripción, que causan un daño crítico a los archivos de una computadora. Finalmente, una pantalla de ransomware informa a la víctima de su destino y propone las instrucciones para la decodificación de sus archivos: un pago de US\$ 300 a US\$ 600 en Bitcoin.
+El virus consiste de dos módulos: un gusano, que mediante \textsc{EternalBlue} se propaga a nuevas máquinas, descarga y ejecuta las herramientas para ejecutar el ataque sobre los archivos, y las herramientas de encripción, que causan un daño crítico a los archivos de una computadora. Finalmente, una pantalla de ransomware informa a la víctima de su destino y propone las instrucciones para la decodificación de sus archivos: un pago de US\$ 300 a US\$ 600 en Bitcoin.
 
 Sin embargo, el virus posee un punto débil. Un {\it killswitch}, un interruptor de apagado, que consiste en una prueba de conexión a una URL de nombre aparentemente aleatorio. Cuando un analista independiente registra el nombre de dominio unas horas luego del inicio del ataque, encuentra que al lograr conectarse, el virus desactiva la herramienta de encripción y detiene el ataque. Múltiples versiones aparecieron luego de activarse el killswitch, tanto con un URL diferente como sin killswitch, pero ya no llegaron a causar el mismo impacto que la primera oleada. \autocite{darknetdiaries-wannacry}
 
 El Departamento de Justicia de los Estados Unidos comunicó a la prensa en 2018 una acusación a un programador de Corea del Norte por su participación en Lazarus Group y los ataques a Sony, robo al Banco de Bangladesh y ataque WannaCry. \autocite{doj-lazarus}
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=1.0\textwidth]{Wana_Decrypt0r.png}
-    \caption{pantalla de una computadora infectada con el ransomware WannaCry}
-\end{figure}
-
 \subsection{NotPetya (2017)}
-% TODO major notpetya
+Antes de la invasión a gran escala, Rusia invadió a Ucrania en 2014 y anexó al territorio de Crimea. Desde entonces, ha estado ocupando el territorio de Donbas y causando sufrimiento para el país ex soviético, que en el pasado se había llamado el granero de la Unión Soviética.
+
+Entre 2014 y 2022 ha regido un caos en el plano cibernético, el cual expertos clasifican como la primera guerra cibernética real. El grupo Sandworm, un APT operado por la unidad militar 74455 de la GRU, el servicio de inteligencia militar de Rusia, ha realizado varios ataques cibernéticos sobre la infraestructura militar y civil de Ucrania. Entre los primeros, están varios ataques destructivos a la red eléctrica del país en 2015 y 2016. \autocite{doj-sandworm}
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=1.0\textwidth]{notPetya.png}
-    \caption{pantalla de una computadora infectada con el ransomware NotPetya}
+    \caption{pantalla de una computadora infectada con el wiper NotPetya}
+    \label{fig:notpetya}
 \end{figure}
+
+En 2017, Sandworm lanza el virus más tarde denominado "NotPetya" \footnote{un ransomware llamado Petya fue usado como la base de este ataque, pero las modificaciones eran sustanciales tanto en su rutina de encripción como en su forma de propagación. Por esta razón, Kaspersky lo llamó ExPetr, o NotPetya. \autocite{kaspersky-notpetya}} por medio de una actualización maliciosa al programa M.E.Doc, un servicio al cual se habían infiltrado unos meses antes. M.E.Doc es un software para el manejo de impuestos en Ucrania, por lo que una infección a este programa resultaría en una infección a la nación entera. Para infectar a las demás computadoras, se empleó una versión modificada de \textsc{EternalBlue}, el mismo exploit usado en WannaCry, y el exploit \textsc{EternalRomance}, también del paquete filtrado por Shadow Brokers.
+
+En realidad, NotPetya no era realmente un ransomware, ya que los autores no proveían los datos necesarios para generar una clave de decodificación. Esto significa que en realidad era un {\it wiper}, con el objetivo de destruir datos y sistemas informáticos a escala masiva, tanto en empresas como instituciones públicas.
+
+Residentes de Ucrania perdieron acceso al pago electrónico del transporte público y la mayoría de los ATMs, supermercados perdieron la habilidad de vender sus productos ya que las cajas se encontraban mostrando una pantalla como en la figura \ref{fig:notpetya}. Todo servicio ucraniano conectado directa o indirectamente a internet se vió afectado.
+
+Pero un worm no conoce límites geográficos. Aunque la mayor parte de las infecciones se dieron en Ucrania, Rusia también se vió muy afectada ya que tenía muchas conexiones con Ucrania. Empresas multinacionales con sedes en Ucrania también fueron atacadas. \autocite{securelist-notpetya}
+
+Uno de los casos más destructivos en empresas es el de Maersk, la empresa de transporte marítimo. Esta perdió la gran mayoría de sus sistemas informáticos, lo que causó filas de decenas de miles de camiones con pedidos que no podían completar, en algunos casos de productos perecederos. Barcos llenos de contenedores llegaban a puertos, pero nadie sabía qué carga tenían los contenedores. El incidente casi destruyó a la empresa, y causó la reconstrucción total de su infraestructura de TIC. \autocite{darknetdiaries-notpetya}
+
+Andy Greenberg, un experto en el grupo Sandworm, llamó al ataque de NotPetya el más destructivo de la historia. Ataques de esta escala brindan un ejemplo de lo que es la guerra cibernética, y de lo que son capaces los grupos APT cuando tienen acceso a armas cibernéticas de grado militar como lo fue \textsc{EternalBlue}. \autocite{wired-notpetya} \autocite{greenberg-sandworm} 
 
 % \subsection{Olympic Destroyer (2018)}
 % TODO only if got time olympic destroyer
@@ -246,6 +263,7 @@ El Departamento de Justicia de los Estados Unidos comunicó a la prensa en 2018 
 \section{Conclusión}
 % TODO conclusion
 % EU sanctions cyberattacks: https://www.consilium.europa.eu/en/press/press-releases/2020/07/30/eu-imposes-the-first-ever-sanctions-against-cyber-attacks/
+This is what cyberwar looks like: an invisible force capable of striking out from an unknown origin to sabotage, on a massive scale, the technologies that underpin civilization. - Andy Greenberg
 
 \newpage
 \printbibliography

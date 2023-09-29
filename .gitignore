@@ -4,6 +4,7 @@
 *.log
 # *.pdf
 *.aux
+*.synctex*
 
 *-blx.bib
 *.bbl
